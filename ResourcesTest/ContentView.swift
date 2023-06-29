@@ -11,47 +11,62 @@ struct ContentView: View
 {
     var body: some View
     {
-        VStack(spacing:30)
+        ZStack
         {
-            Link(destination: URL(string: "https://www.world-of-lucid-dreaming.com/30-common-dream-symbols.html")!, label:
-            {
-                Text("Common Dream Symbols")
-                    .bold()
-                    .frame(width: 280, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.black)
-                    .cornerRadius(12)
-            })
+            Color("#9AC5F4")
+                .ignoresSafeArea()
             
-            Link(destination: URL(string: "https://health.clevelandclinic.org/dreams-and-dreaming/")!, label:
-            {
-                Text("What Dreams Mean")
-                    .bold()
-                    .frame(width: 280, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.black)
-                    .cornerRadius(12)
-            })
+            Text("Resources")
+                .font(.title)
             
-            Link(destination: URL(string: "https://thesleepdoctor.com/dreams/mental-health-and-dreams/")!, label:
+            VStack(spacing:30)
             {
-                Text("Dreams and Mental Health")
-                    .bold()
-                    .frame(width: 280, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.black)
-                    .cornerRadius(12)
-            })
+                Link(destination: URL(string: "https://www.world-of-lucid-dreaming.com/30-common-dream-symbols.html")!, label:
+                        {
+                    Text("Common Dream Symbols")
+                        .bold()
+                        .frame(width: 280, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                
+                Link(destination: URL(string: "https://health.clevelandclinic.org/dreams-and-dreaming/")!, label:
+                        {
+                    Text("What Dreams Mean")
+                        .bold()
+                        .frame(width: 280, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                
+                Link(destination: URL(string: "https://thesleepdoctor.com/dreams/mental-health-and-dreams/")!, label:
+                        {
+                    Text("Dreams and Mental Health")
+                        .bold()
+                        .frame(width: 280, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+                
+                Link(destination: URL(string: "https://www.healthline.com/health/healthy-sleep/how-to-lucid-dream")!, label:
+                        {
+                    Text("Lucid Dreaming")
+                        .bold()
+                        .frame(width: 280, height: 50)
+                        .foregroundColor(.white)
+                        .background(Color.black)
+                        .cornerRadius(12)
+                })
+            }
             
-            Link(destination: URL(string: "https://www.healthline.com/health/healthy-sleep/how-to-lucid-dream")!, label:
-            {
-                Text("Lucid Dreaming")
-                    .bold()
-                    .frame(width: 280, height: 50)
-                    .foregroundColor(.white)
-                    .background(Color.black)
-                    .cornerRadius(12)
-            })
+            .padding()
+            .background(Rectangle().foregroundColor(.white))
+                .cornerRadius(15)
+                .shadow(radius:15)
+            .padding()
         }
     }
 }
@@ -64,5 +79,3 @@ struct ContentView_Previews: PreviewProvider
         ContentView()
     }
 }
-
-//Link("Apple", destination: URL(string:"https://www.apple.com")!)
