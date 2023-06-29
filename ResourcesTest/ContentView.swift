@@ -14,7 +14,7 @@ struct ContentView: View
         ZStack
         {
             
-            Color(.systemCyan)
+            Color((red : 154/255, green: 197/255, blue:  244/255) as! CGColor)
                 .ignoresSafeArea()
             
             VStack {
